@@ -2,17 +2,16 @@
   "expo": {
     "name": "BaitMeOut",
     "slug": "BaitMeOut",
-    "version": "1.0.0",
-    "platforms": ["ios", "android", "web"],
+    "description": "Bait Me Out is simply a Truth Question Randomiser. Good truth questions are thought-provoking, and some can elicit just as much of an adrenaline rush as doing a dare. Struggling to come up with a question? just hit 'Bait Me Out' and let the app handle the rest!",
+    "version": "2.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/icon.png",
+    "scheme": "BaitMeOut",
+    "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/splash.png",
       "resizeMode": "cover",
       "backgroundColor": "#2A1334"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
@@ -23,20 +22,34 @@
       "buildNumber": "1.0.0"
     },
     "android": {
-      "permissions": [],
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#2A1334"
       },
       "package": "com.shavgraphics.baitmeout",
       "versionCode": 2
     },
-    "description": "Bait Me Out is simply a Truth Question Randomiser. Good truth questions are thought-provoking, and some can elicit just as much of an adrenaline rush as doing a dare. Struggling to come up with a question? just hit 'Bait Me Out' and let the app handle the rest!",
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
     "notification": {
       "iosDisplayInForeground": true
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f49eb4e0-a1f7-448a-86d9-0fd18e3d374e"
+      }
     }
   }
 }

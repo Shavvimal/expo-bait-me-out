@@ -1,30 +1,15 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import {
-  useFonts,
-  Poppins_300Light,
-  Poppins_100Thin,
-} from "@expo-google-fonts/poppins";
-import AppLoading from "expo-app-loading";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 
-function AppButton({ title, onPress }) {
-  let [fontsLoaded, error] = useFonts({
-    Poppins_300Light,
-  });
-
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  }
-
+function AppButton({ title, onPress }: { title: string; onPress: () => void }) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.viewoutside}>
         <LinearGradient colors={["#8A4593", "#452251"]} style={styles.button}>
           <View style={styles.icon}>
-            <Text style={styles.text}>{title}</Text>
-
+            <Text style={styles.text}>{title} </Text>
             <MaterialCommunityIcons
               style={styles.icon2}
               name="rotate-3d-variant"
@@ -59,7 +44,7 @@ const styles = StyleSheet.create({
   text: {
     color: "white",
     fontSize: 18,
-    fontFamily: "Poppins_300Light",
+    fontFamily: "PoppinsLight",
   },
   icon: {
     flex: 1,
